@@ -1,12 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfólio Juridico - Hamilton Meneses & Ana Alves</title>
-  <link rel="stylesheet" href="css/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advogados Sócios | Alves & Meneses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <h1>Página em construção</h1>
+<body class="body-padrao">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+            <div class="container">
+                <a class="navbar-brand brand-title" href="index.html">
+                    ALVES & MENESES<br><span class="brand-subtitle">Advocacia Internacional</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="advogados.html">Advogados</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicos.html">Áreas de Atuação</a></li>
+                        <li class="nav-item"><a class="nav-link btn-destaque-nav" href="contato.html">Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5 mt-5">
+        <div class="text-center mb-5 pt-4">
+            <h1 class="section-title">Nossos Sócios Fundadores</h1>
+            <p class="lead text-muted">Profissionais com sólida formação acadêmica e habilitação ativa no Brasil e na Europa.</p>
+        </div>
+
+        <div class="row g-5">
+            <article class="col-lg-6">
+                <div class="card card-advogado h-100 p-4 shadow-sm">
+                    <div class="d-flex flex-column align-items-center text-center mb-4">
+                        <div class="avatar-advogado mb-3">AM</div>
+                        <h2 class="h4 fw-bold mb-1">Dra. Ana Maria Gonçalves Alves</h2>
+                        <div class="badges-credenciais d-flex gap-2 justify-content-center flex-wrap mt-2">
+                            <span class="badge bg-brasil">OAB/CE 42.783 (Brasil)</span>
+                            <span class="badge bg-portugal">OA 68822P (Portugal)</span>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <p class="text-justified text-muted">
+                            Advogada com destacada trajetória na consultoria internacional e direito registral. Com dupla habilitação, coordena o núcleo de **Nacionalidade Portuguesa e Genealogia** do escritório.
+                        </p>
+                        <p class="text-justified text-muted">
+                            Especialista na minuciosa busca e análise de acervos documentais seculares, garantindo a perfeita instrução dos processos de atribuição e aquisição de nacionalidade junto às Conservatórias dos Registos Centrais de Lisboa e do Porto.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 text-center pt-3">
+                        <a href="contato.html" class="btn btn-custom-outline w-100">Solicitar Parecer com Dra. Ana</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-lg-6">
+                <div class="card card-advogado h-100 p-4 shadow-sm">
+                    <div class="d-flex flex-column align-items-center text-center mb-4">
+                        <div class="avatar-advogado mb-3">JH</div>
+                        <h2 class="h4 fw-bold mb-1">Dr. José Hamilton Meneses Filho</h2>
+                        <div class="badges-credenciais d-flex gap-2 justify-content-center flex-wrap mt-2">
+                            <span class="badge bg-brasil">OAB/CE 48.135 (Brasil)</span>
+                            <span class="badge bg-portugal">OA 68821P (Portugal)</span>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <p class="text-justified text-muted">
+                            Advogado com vasta experiência em negociações complexas, direito patrimonial e **Assessoria Imobiliária**. Atua diretamente na proteção de capitais e estruturação de investimentos estrangeiros.
+                        </p>
+                        <p class="text-justified text-muted">
+                            Lidera as auditorias jurídicas (*Due Diligence*) para aquisição de imóveis em território português, elaboração de contratos bilaterais de compra e venda, e assessoria na obtenção de vistos de residência e relocalização fiscal.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 text-center pt-3">
+                        <a href="contato.html" class="btn btn-custom-outline w-100">Consultar Dr. José Hamilton</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer-custom py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2026 Alves & Meneses Advocacia Internacional.</p>
+            <p class="text-muted small mb-0">Projeto Final - Desenvolvimento Web 1 | IFCE - Prof. Kaio Jonathas</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
