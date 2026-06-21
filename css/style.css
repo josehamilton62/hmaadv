@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VARIÁVEIS CSS (Declaradas no :root conforme Aula 4)
+   VARIÁVEIS CSS
    ========================================================================== */
 :root {
     --cor-principal: #0f172a;       /* Azul marinho escuro / Tom jurídico soberano */
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 .bg-escuro { background-color: var(--cor-principal) !important; }
 
 /* ==========================================================================
-   SOBRESCREVENDO A NAVBAR DO BOOTSTRAP (Conforme Aula 3 e 7)
+   SOBRESCREVENDO A NAVBAR DO BOOTSTRAP 
    ========================================================================== */
 .custom-navbar {
     background-color: var(--cor-principal) !important;
@@ -283,7 +283,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   MEDIA QUERIES (Responsividade Avançada - Aula 5)
+   MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 768px) {
     .hero-section {
