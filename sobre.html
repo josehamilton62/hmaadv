@@ -1,12 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfólio Juridico - Hamilton Meneses & Ana Alves</title>
-  <link rel="stylesheet" href="css/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Alves & Meneses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <h1>Página em construção</h1>
+<body class="body-padrao">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+            <div class="container">
+                <a class="navbar-brand brand-title" href="index.html">
+                    ALVES & MENESES<br><span class="brand-subtitle">Advocacia Internacional</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="advogados.html">Advogados</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicos.html">Áreas de Atuação</a></li>
+                        <li class="nav-item"><a class="nav-link active btn-destaque-nav" aria-current="page" href="contato.html">Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5 mt-5">
+        <div class="text-center mb-5 pt-4">
+            <h1 class="section-title">Inicie Seu Atendimento</h1>
+            <p class="lead text-muted">Preencha o formulário abaixo ou utilize nossos canais diretos no Brasil e em Portugal.</p>
+        </div>
+
+        <div class="row g-5">
+            <section class="col-lg-7">
+                <div class="card card-form p-4 shadow-sm border-0">
+                    <h2 class="h5 fw-bold mb-4">Envie sua mensagem</h2>
+                    <form action="#" method="POST" class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nome" class="form-label fw-medium small">Nome Completo *</label>
+                            <input type="text" class="form-control custom-input" id="nome" required placeholder="Digite seu nome">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label fw-medium small">E-mail *</label>
+                            <input type="email" class="form-control custom-input" id="email" required placeholder="seuemail@dominio.com">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="telefone" class="form-label fw-medium small">WhatsApp / Telefone</label>
+                            <input type="tel" class="form-control custom-input" id="telefone" placeholder="+55 (00) 00000-0000">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="assunto" class="form-label fw-medium small">Área de Interesse *</label>
+                            <select id="assunto" class="form-select custom-input" required>
+                                <option value="" selected disabled>Selecione uma opção...</option>
+                                <option value="nacionalidade">Nacionalidade Portuguesa</option>
+                                <option value="genealogia">Pesquisa Genealógica</option>
+                                <option value="imobiliario">Assessoria Imobiliária em Portugal</option>
+                                <option value="outro">Outros assuntos jurídicos</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="mensagem" class="form-label fw-medium small">Resumo do Caso *</label>
+                            <textarea class="form-control custom-input" id="mensagem" rows="5" required placeholder="Descreva brevemente a sua necessidade ou dúvida..."></textarea>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-custom-primary w-100 py-2 fw-bold">Enviar Solicitação de Contato</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="col-lg-5">
+                <div class="d-flex flex-column gap-4 h-100 justify-content-between">
+                    <div class="card p-4 shadow-sm border-0 bg-fundo-destaque">
+                        <h3 class="h5 fw-bold mb-3 text-destaque">Atendimento Imediato</h3>
+                        <p class="text-muted small mb-3">Se preferir uma resposta instantânea, clique abaixo para falar diretamente no WhatsApp da nossa equipe de triagem:</p>
+                        <a href="https://wa.me/5585999999999" target="_blank" class="btn btn-whatsapp mb-2 fw-bold">
+                            💬 Falar no WhatsApp
+                        </a>
+                        <div class="mt-3 text-muted small">
+                            <strong>E-mail Central:</strong> contato@alvesemeneses.jur.br
+                        </div>
+                    </div>
+
+                    <div class="card p-4 shadow-sm border-0">
+                        <h3 class="h6 fw-bold mb-2">📍 Escritório Brasil</h3>
+                        <p class="text-muted small mb-0">
+                            Av. Desembargador Moreira, 2000, Torre Jurídica, Sala 405<br>
+                            Aldeota - Fortaleza/CE, Brasil - CEP 60170-001<br>
+                            Telefone: +55 (85) 3000-4278
+                        </p>
+                    </div>
+
+                    <div class="card p-4 shadow-sm border-0">
+                        <h3 class="h6 fw-bold mb-2">📍 Escritório Portugal</h3>
+                        <p class="text-muted small mb-0">
+                            Avenida da Liberdade, 110, 3º Andar<br>
+                            Santo António - Lisboa, Portugal - C.P. 1250-146<br>
+                            Telefone: +351 210 006 882
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-custom py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2026 Alves & Meneses Advocacia Internacional.</p>
+            <p class="text-muted small mb-0">Projeto Final - Desenvolvimento Web 1 | IFCE - Prof. Kaio Jonathas</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
