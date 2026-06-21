@@ -1,0 +1,294 @@
+/* ==========================================================================
+   VARIÁVEIS CSS
+   ========================================================================== */
+:root {
+    --cor-principal: #0f172a;       /* Azul marinho escuro / Tom jurídico soberano */
+    --cor-secundaria: #1e293b;      /* Tom intermediário para cards escuros */
+    --cor-destaque: #d97706;        /* Dourado/Âmbar requintado */
+    --cor-destaque-hover: #b45309;  /* Dourado escuro para hover */
+    --cor-texto: #334155;           /* Chumbo escuro para excelente leitura */
+    --cor-texto-mutado: #64748b;    /* Cinza médio */
+    --cor-fundo: #f8fafc;           /* Cinza super claro / Off-white */
+    --cor-branco: #ffffff;
+    
+    --fonte-base: 'Inter', system-ui, -apple-system, sans-serif;
+    --fonte-titulo: 'Playfair Display', serif;
+}
+
+/* ==========================================================================
+   REGRAS GERAIS E RESETS
+   ========================================================================== */
+body {
+    font-family: var(--fonte-base);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+}
+
+/* utilitários */
+.text-justified { text-align: justify; }
+.text-destaque { color: var(--cor-destaque) !important; }
+.text-dourado { color: #f59e0b !important; }
+.bg-escuro { background-color: var(--cor-principal) !important; }
+
+/* ==========================================================================
+   SOBRESCREVENDO A NAVBAR DO BOOTSTRAP 
+   ========================================================================== */
+.custom-navbar {
+    background-color: var(--cor-principal) !important;
+    border-bottom: 3px solid var(--cor-destaque);
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.brand-title {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.brand-subtitle {
+    font-family: var(--fonte-base);
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85) !important;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--cor-destaque) !important;
+}
+
+.btn-destaque-nav {
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco) !important;
+    border-radius: 4px;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    font-weight: 600 !important;
+}
+
+.btn-destaque-nav:hover {
+    background-color: var(--cor-destaque-hover);
+    color: var(--cor-branco) !important;
+}
+
+/* ==========================================================================
+   HERO SECTION (Página Inicial)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: var(--cor-branco);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, rgba(217,119,6,0.1) 0%, rgba(0,0,0,0.4) 80%);
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-content h1 {
+    color: var(--cor-branco);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.max-w-700 { max-width: 700px; }
+
+/* Botões Customizados */
+.btn-custom-primary {
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+    border: none;
+    font-weight: 600;
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.btn-custom-primary:hover {
+    background-color: var(--cor-destaque-hover);
+    color: var(--cor-branco);
+    transform: translateY(-2px);
+}
+
+.btn-custom-outline {
+    background-color: transparent;
+    color: var(--cor-branco);
+    border: 2px solid var(--cor-destaque);
+    font-weight: 600;
+    padding: 0.75rem 1.8rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.btn-custom-outline:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+}
+
+/* ==========================================================================
+   CARDS E SEÇÕES (UX e Hierarquia Visual - Aula 6)
+   ========================================================================== */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-destaque);
+}
+
+.card-diferencial {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.card-diferencial:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+}
+
+/* ==========================================================================
+   PÁGINA: ADVOGADOS
+   ========================================================================== */
+.card-advogado {
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    background-color: var(--cor-branco);
+}
+
+.avatar-advogado {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-destaque);
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--cor-destaque);
+}
+
+.bg-brasil { background-color: #008756; color: white; font-weight: 500; }
+.bg-portugal { background-color: #990000; color: white; font-weight: 500; }
+
+/* ==========================================================================
+   PÁGINA: SERVIÇOS
+   ========================================================================== */
+.border-top-destaque {
+    border: none;
+    border-top: 4px solid var(--cor-destaque);
+    border-radius: 8px;
+}
+
+.lista-servicos {
+    padding-left: 1.2rem;
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+.lista-servicos li {
+    margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   PÁGINA: CONTATO E FORMULÁRIO
+   ========================================================================== */
+.card-form {
+    border-radius: 12px;
+}
+
+.custom-input {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+}
+
+.custom-input:focus {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 0.25rem rgba(217,119,6,0.15);
+}
+
+.bg-fundo-destaque {
+    background-color: #fef3c7; /* Amarelo bem suave */
+    border-left: 4px solid var(--cor-destaque) !important;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+    display: block;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1fad53;
+    color: white;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.footer-custom {
+    background-color: #090d16;
+    color: rgba(255,255,255,0.6);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+    .hero-content h1 { font-size: 2.2rem; }
+    .section-title { font-size: 1.8rem; }
+}
