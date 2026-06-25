@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VARIÁVEIS CSS
+   VARIÁVEIS CSS (Declaradas no :root conforme Aula 4)
    ========================================================================== */
 :root {
     --cor-principal: #0f172a;       /* Azul marinho escuro / Tom jurídico soberano */
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 .bg-escuro { background-color: var(--cor-principal) !important; }
 
 /* ==========================================================================
-   SOBRESCREVENDO A NAVBAR DO BOOTSTRAP 
+   SOBRESCREVENDO A NAVBAR DO BOOTSTRAP (Conforme Aula 3 e 7)
    ========================================================================== */
 .custom-navbar {
     background-color: var(--cor-principal) !important;
@@ -120,7 +120,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .max-w-700 { max-width: 700px; }
 
-/* Botões Customizados */
+/* ==========================================================================
+   BOTÕES CUSTOMIZADOS (CORRIGIDO WCAG CONTRASTE - AULA 4 e 6)
+   ========================================================================== */
 .btn-custom-primary {
     background-color: var(--cor-destaque);
     color: var(--cor-branco);
@@ -137,19 +139,20 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-2px);
 }
 
+/* CORREÇÃO DO BOTÃO CONSULTAR: COR DO TEXTO DEFINIDA NO ESTADO PADRÃO */
 .btn-custom-outline {
     background-color: transparent;
-    color: var(--cor-branco);
+    color: var(--cor-destaque);           /* AJUSTADO: Texto escuro/destaque no padrão */
     border: 2px solid var(--cor-destaque);
     font-weight: 600;
     padding: 0.75rem 1.8rem;
     border-radius: 4px;
-    transition: all 0.2s;
+    transition: background-color 0.2s ease, color 0.2s ease; /* Transição suave */
 }
 
 .btn-custom-outline:hover {
     background-color: var(--cor-destaque);
-    color: var(--cor-branco);
+    color: var(--cor-branco);             /* Mantido o texto branco apenas no hover */
 }
 
 /* ==========================================================================
@@ -283,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   MEDIA QUERIES
+   MEDIA QUERIES (Responsividade Avançada - Aula 5)
    ========================================================================== */
 @media (max-width: 768px) {
     .hero-section {
